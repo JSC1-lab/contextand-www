@@ -144,6 +144,21 @@ h2{font-size:clamp(30px,4vw,50px);font-weight:800;max-width:20ch;margin-bottom:2
 }
 .quote-block .q em{font-style:normal;color:var(--spruce)}
 
+/* Land photo — §02 */
+.land-grid{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center;margin-top:20px;
+}
+.land-photo{margin:0}
+.land-photo img{
+  display:block;width:100%;height:auto;border:1px solid var(--line);
+}
+.land-photo figcaption{
+  margin-top:12px;font-size:12px;letter-spacing:.04em;color:var(--granite);
+}
+@media (max-width:820px){
+  .land-grid{grid-template-columns:1fr;gap:32px}
+}
+
 /* Chain cards */
 .chain{
   display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
@@ -328,8 +343,14 @@ footer{border-top:1px solid var(--line);padding:70px 0 50px;color:var(--granite)
   <div class="wrap">
     <div class="mono eyebrow reveal">§ 02 &nbsp;·&nbsp; Where it comes from</div>
     <h2 class="reveal">“Nordic” is not a marketing word to us.</h2>
-    <div class="quote-block reveal">
-      <p class="q">Trust here is not a value on a poster — it is working infrastructure. High standards <em>and</em> high voice: authority is earned, and challenge is open. We live close to the land and close to our customers. It is where we go to be slow — <em>so we can be sharp at work.</em></p>
+    <div class="land-grid reveal">
+      <div class="quote-block">
+        <p class="q">Trust here is not a value on a poster — it is working infrastructure. High standards <em>and</em> high voice: authority is earned, and challenge is open. We live close to the land and close to our customers. It is where we go to be slow — <em>so we can be sharp at work.</em></p>
+      </div>
+      <figure class="land-photo">
+        <img src="skjoldungernes-land.jpg" alt="Evening light over fields and trees in Skjoldungernes land, a white church on the ridge" loading="lazy">
+        <figcaption class="mono">Skjoldungernes land, from our fields. Where the working day ends, the farm work begins.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -445,8 +466,8 @@ footer{border-top:1px solid var(--line);padding:70px 0 50px;color:var(--granite)
       </div>
       <div>
         <span class="step-no">Learned, not read · 03</span>
-        <h3>Freed hours vanish by default</h3>
-        <p>AI frees time. Unless leadership decides where those hours go — to customers, to growth, to the next problem — they simply evaporate.</p>
+        <h3>Freed hours are a choice</h3>
+        <p>AI frees time. The mistake is letting "efficiency" decide what happens to it by default. Freed hours are a decision — pointed at customers, at growth, at the next problem, or taken as saving.</p>
       </div>
       <div>
         <span class="step-no">Learned, not read · 04</span>
@@ -483,7 +504,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 50px;color:var(--granite)
     <div class="promises reveal">
       <div>
         <h3>The freed hours belong to you</h3>
-        <p>AI will free time in your company. Those hours are yours — to point at growth, at your customers, at the next challenge. We will never let them quietly vanish.</p>
+        <p>AI will free time in your company. Those hours are yours — to point at growth, at your customers, at the next challenge. Some you may choose to take as saving; that is your call to make. Our job is to make sure it is a choice, not a default.</p>
       </div>
       <div>
         <h3>Trust, with accountability</h3>
@@ -544,7 +565,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 50px;color:var(--granite)
     <div class="mono eyebrow reveal">§ 09 &nbsp;·&nbsp; Where every Frontier journey begins</div>
     <h2 class="reveal">Start with one day.</h2>
     <p class="reveal">The Leadership Workshop: one day, your leadership team, the five questions, and a direction you own. Whatever you decide afterwards, the clarity is yours to keep.</p>
-    <a class="btn btn-dark reveal" href="mailto:hello@contextand.com">Book the Leadership Workshop</a>
+    <a class="btn btn-dark reveal" href="mailto:jsc@contextand.com">Book the Leadership Workshop</a>
   </div>
 </section>
 
