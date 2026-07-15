@@ -7,16 +7,17 @@
 <meta name="description" content="The personal site of Jakob Schou, CEO of Context& — a Nordic Microsoft AI consultancy that merged four companies and redesigned itself around AI at the same time. Notes on leadership, trust and AI transformation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#FBFAFE;
-  --ink:#0E0F13;
-  --granite:#5A5566;
-  --spruce:#5500FF;
-  --spruce-soft:#F4F1FF;
-  --line:#E2DEED;
-  --orange:#FF7A1A;
+  --paper:#FAF7F1;
+  --ink:#1F1B15;
+  --granite:#6E6557;
+  --violet:#5500FF;
+  --barley:#B07A1F;
+  --fjord:#42586B;
+  --chalk:#F2ECDF;
+  --line:#E3DCCD;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -28,81 +29,83 @@ body{
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:'Archivo','Helvetica Neue',sans-serif;letter-spacing:-0.02em;line-height:1.1}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em;line-height:1.12}
 .mono{
   font-family:'IBM Plex Mono', monospace;
   font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--granite);
 }
-.amp{color:var(--spruce)}
+.amp{color:var(--violet)}
 a{color:inherit}
 .wrap{max-width:880px;margin:0 auto;padding:0 28px}
 
-nav{padding:22px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(251,250,254,.92);backdrop-filter:blur(8px);z-index:10}
+nav{padding:22px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(250,247,241,.92);backdrop-filter:blur(8px);z-index:10}
 nav .wrap{display:flex;justify-content:space-between;align-items:baseline}
-.logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px;text-decoration:none}
+.logo{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;text-decoration:none}
 nav .links{display:flex;gap:26px}
-nav .links a{font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;color:var(--granite);text-decoration:none}
+nav .links a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--granite);text-decoration:none}
 nav .links a:hover{color:var(--ink)}
 @media (max-width:640px){nav .links{gap:16px}nav .links a:nth-child(4){display:none}}
 
-header{padding:96px 0 80px;border-bottom:1px solid var(--line)}
+header{padding:96px 0 72px}
 header .kicker{margin-bottom:22px}
 header h1{font-size:clamp(38px,6vw,64px);margin-bottom:26px}
 header .lead{font-size:22px;line-height:1.6;color:var(--granite);max-width:64ch}
 header .lead strong{color:var(--ink);font-weight:500}
 
 section{padding:80px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+.ridge{display:block;width:100%;height:30px;color:var(--barley)}
 .sec-kicker{margin-bottom:16px}
 section h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:24px;max-width:24ch}
 section p{margin-bottom:24px;max-width:66ch}
 section p:last-child{margin-bottom:0}
 em{font-style:italic}
 .sig{
-  border-left:3px solid var(--spruce);padding-left:26px;margin:36px 0;
+  border-left:3px solid var(--barley);padding-left:26px;margin:36px 0;
   font-size:23px;line-height:1.5;font-style:italic;max-width:56ch;
 }
-.sig em{font-style:normal;color:var(--spruce)}
+.sig em{font-style:normal;color:var(--barley)}
 
 .pair{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin:36px 0;max-width:720px}
 .pair .word h3{font-size:22px;margin-bottom:8px}
 .pair .word p{font-size:16.5px;color:var(--granite);margin:0}
-.pair .eq{font-family:'Archivo',sans-serif;font-size:30px;font-weight:800;color:var(--spruce)}
+.pair .eq{font-family:'Fraunces',Georgia,serif;font-size:30px;font-weight:600;color:var(--barley)}
 @media (max-width:640px){.pair{grid-template-columns:1fr;gap:16px}.pair .eq{text-align:left}}
 
 .ladder{margin:36px 0;border-top:1px solid var(--line)}
 .rung{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
-.rung .name{font-family:'Archivo',sans-serif;font-weight:700;font-size:17px}
+.rung .name{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px}
 .rung .name span{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12px;color:var(--granite);margin-top:4px;text-transform:none;letter-spacing:.02em}
 .rung p{font-size:16.5px;color:var(--granite);margin:0;max-width:none}
 @media (max-width:640px){.rung{grid-template-columns:1fr;gap:8px}}
 
 .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0}
 .proof div{background:var(--paper);padding:22px}
-.proof b{font-family:'Archivo',sans-serif;font-size:22px;display:block;margin-bottom:6px}
+.proof b{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:22px;display:block;margin-bottom:6px}
 .proof span{font-size:15px;color:var(--granite);line-height:1.5;display:block}
 @media (max-width:640px){.proof{grid-template-columns:1fr}}
 
 .land-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .land-photo{margin:0}
 .land-photo img{display:block;width:100%;height:auto;border:1px solid var(--line)}
-.land-photo figcaption{margin-top:12px;font-size:12px;letter-spacing:.04em}
+.land-photo figcaption{margin-top:12px;font-size:12px;letter-spacing:.04em;color:var(--fjord)}
 @media (max-width:820px){.land-grid{grid-template-columns:1fr;gap:32px}}
 
 .note-card{border:1px solid var(--line);padding:34px;max-width:720px;text-decoration:none;display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:center;transition:border-color .2s}
-.note-card:hover{border-color:var(--spruce)}
+.note-card:hover{border-color:var(--barley)}
 .note-card .mono{margin-bottom:12px}
 .note-card h3{font-size:24px;margin-bottom:12px}
 .note-card p{font-size:17px;color:var(--granite);font-style:italic;margin:0}
-.note-card .readon{display:inline-block;margin-top:18px;font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;color:var(--spruce)}
+.note-card .readon{display:inline-block;margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--barley)}
 .note-card .thumb{width:200px;height:150px;object-fit:cover;border:1px solid var(--line)}
 @media (max-width:640px){
   .note-card{grid-template-columns:1fr;padding:26px}
   .note-card .thumb{width:100%;height:180px;order:-1}
 }
 
-.cta{background:var(--spruce-soft);border:1px solid var(--line);padding:40px;max-width:720px;margin-top:36px}
+.cta{background:var(--chalk);border:1px solid var(--line);padding:40px;max-width:720px;margin-top:36px}
 .cta p{margin-bottom:16px}
-.cta .mail{font-family:'Archivo',sans-serif;font-weight:700;font-size:20px;color:var(--spruce);text-decoration:none}
+.cta .mail{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;color:var(--barley);text-decoration:none}
 .cta .small{font-size:15px;color:var(--granite);margin:12px 0 0}
 
 footer{padding:56px 0 72px}
@@ -133,6 +136,8 @@ footer a:hover{color:var(--ink)}
     <p class="lead">This is my site, but it is about <strong>us</strong>: Context<span class="amp">&</span>, the Nordic Microsoft AI consultancy we merged from four companies and redesigned around AI — at the same time. What you find here is the working-out: what an AI-native company learns by living its own transformation, told by the person who has to stand by it. <strong>The polished version lives at contextand.com. The working-out happens here.</strong></p>
   </div>
 </header>
+
+<svg class="ridge" viewBox="0 0 1200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0,24 L190,24 L280,13 L380,18 L520,8 L552,8 L560,3 L568,8 L600,8 L760,16 L920,11 L1080,21 L1200,18" stroke="currentColor" stroke-width="1.5" fill="none" vector-effect="non-scaling-stroke"/></svg>
 
 <section id="company">
   <div class="wrap">
@@ -219,6 +224,8 @@ footer a:hover{color:var(--ink)}
     </a>
   </div>
 </section>
+
+<svg class="ridge" viewBox="0 0 1200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0,18 L120,21 L280,11 L440,16 L632,8 L664,8 L672,3 L680,8 L712,8 L820,18 L1010,13 L1200,24" stroke="currentColor" stroke-width="1.5" fill="none" vector-effect="non-scaling-stroke"/></svg>
 
 <footer>
   <div class="wrap">
